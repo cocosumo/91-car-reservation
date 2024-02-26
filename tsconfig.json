@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "commonjs",
+    "baseUrl": ".",
+    "outDir": "built",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "isolatedModules": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@helpers/*": [
+        "./src/helpers/*"
+      ],
+    },
+  },
+  "files": [
+    "./node_modules/@kintone/dts-gen/kintone.d.ts",
+  ],
+  "exclude": [
+    "./dist",
+    "webpack.config.dev.js",
+    "webpack.config.prod.js",
+    "jest.config.js"
+  ],
+  "include": [
+    "src",
+  ],
+}

@@ -1,0 +1,33 @@
+table.react.table {
+  height: 40px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 12px;
+  white-space: nowrap;
+  margin: auto;
+
+}
+
+table.react td {
+  border-style: solid;
+  border-color: #e3e7e8;
+  border-width: 1px 1px 1px 1px !important;
+}
+
+table.react thead {
+  background-color: #3498db;
+  border-color: #3498db;
+  color: #fff;
+  text-align: center;
+}
+table.react thead th {
+  padding: 8px;
+}
+
+
+table.react tbody td {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}

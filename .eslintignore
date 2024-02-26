@@ -1,0 +1,5 @@
+webpack.config.*
+jest.config.js
+
+.env.*
+*.d.ts

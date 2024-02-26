@@ -1,0 +1,43 @@
+
+.gaia-mobile-app-customview-pager {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  /* WeekHeaders */
+  .fc table .fc-col-header-cell-cushion {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  /* Title */
+  .fc .fc-toolbar-title {
+    font-size: 1rem;
+    max-width: 130px;
+  }
+}
+
+@media (max-width: 450px) {
+  /* WeekHeaders */
+  .fc table .fc-col-header-cell-cushion {
+    font-size: 10px;
+    padding: 5px;
+
+  }
+
+  .fc-scrollgrid-sync-inner {
+    transform:
+    /* Magic Numbers */
+    translate(0px, 40px)
+    /* 45 is really 360 - 45 */
+    rotate(270deg);
+
+  }
+  th.fc-col-header-cell {
+    height: 80px;
+  }
+}
+
+
+
