@@ -49,18 +49,17 @@ export const useChangeListener = ({
 		console.log(event);
 
 		const {開始, 終了, 期間, fullDay, returnDate} = availableCarsRecord;
+		const changedField = type.split('.').at(-1) as keyof DB.SavedRecord;
 
 		const isFullDay = fullDay.value.includes('終日');
 
-		console.log('returnDate:', type, returnDate.value);	
 
 		if (type.includes(returnDateKey)) {
 			// If return date is changed, set the return date to the end date
-			
 			終了.value = returnDate.value;
 		}
 
-		if (isFullDay) {
+		if (changedField === 'fullDay' && isFullDay) {
 			if (開始.value) {
 				const start = dt.fromISO(開始.value);
 				開始.value = start.set({hour: 0, minute: 1}).toISO() ?? '';
