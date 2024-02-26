@@ -1,14 +1,12 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = env => {
   console.log('env', env, 'prod');
   return ({
-  mode: 'development',
+  mode: 'production',
   plugins: [
     new Dotenv({ path: './.env' }),
-    new TsconfigPathsPlugin(),
   ],
 
   entry: {
@@ -27,6 +25,10 @@ module.exports = env => {
       "path": false,
       "os": false,
       crypto: false,
+
+    },
+    alias: {
+      '@helpers': path.resolve(__dirname, 'src/helpers/'),
     },
   },
 
